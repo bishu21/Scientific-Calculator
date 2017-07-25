@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:andriod="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.bishwendra.studenthelp.Calculator"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TFnum1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onButtonclick"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TFnum2"
+        android:onClick="onButtonclick"
+        android:layout_below="@+id/TFnum1"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/Badd"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/TFnum2"
+        android:layout_alignParentStart="true"
+        android:onClick="onButtonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/Bminus"
+        android:layout_alignTop="@+id/Badd"
+        android:layout_toEndOf="@+id/Badd"
+        android:onClick="onButtonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:id="@+id/Bmult"
+        android:layout_alignTop="@+id/Bminus"
+        android:layout_toEndOf="@+id/Bminus"
+        android:onClick="onButtonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:id="@+id/Bdiv"
+        android:layout_below="@+id/Badd"
+        android:layout_toStartOf="@+id/Bminus"
+        android:onClick="onButtonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sin"
+        android:id="@+id/Bsin"
+        android:layout_alignTop="@+id/Bdiv"
+        android:layout_alignStart="@+id/Bminus"
+        android:layout_toStartOf="@+id/Bmult"
+        android:onClick="onButtonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cos"
+        android:id="@+id/Bcos"
+        android:layout_below="@+id/Bmult"
+        android:layout_alignStart="@+id/Bmult"
+        android:layout_alignEnd="@+id/Bmult"
+        android:onClick="onButtonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tan"
+        android:id="@+id/Btan"
+        android:layout_below="@+id/Bdiv"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/Bsin"
+        android:onClick="onButtonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cosec"
+        android:id="@+id/Bcosec"
+        android:layout_below="@+id/Bsin"
+        android:layout_alignStart="@+id/Bsin"
+        android:layout_toStartOf="@+id/Bcos"
+        android:onClick="onButtonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sec"
+        android:id="@+id/Bsec"
+        android:layout_below="@+id/Bcos"
+        android:layout_alignStart="@+id/Bcos"
+        android:layout_alignEnd="@+id/Bcos"
+        android:onClick="onButtonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cot"
+        android:id="@+id/Bcot"
+        android:layout_below="@+id/Btan"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/Btan"
+        android:onClick="onButtonclick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:id="@+id/button4"
+        android:layout_below="@+id/Bcosec"
+        android:layout_alignStart="@+id/Bcosec"
+        android:layout_alignEnd="@+id/Bsec"
+        android:onClick="onButtonclick" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Lresult"
+        android:layout_above="@+id/Bminus"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/TFnum2"
+        android:hint="answerr" />
+</RelativeLayout>
